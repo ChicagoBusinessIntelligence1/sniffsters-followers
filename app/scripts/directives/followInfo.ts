@@ -16,11 +16,6 @@ var followInfo:() => ng.IDirective = () => {
             ctrl:'=',
             arrIndex:'@'
 
-        },
-        link: (scope:IFollowInfo, element:ng.IAugmentedJQuery, attrs:ng.IAttributes) => {
-
-
-
         }
     }
 }
