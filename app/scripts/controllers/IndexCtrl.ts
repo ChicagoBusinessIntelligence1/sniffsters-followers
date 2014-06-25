@@ -1,4 +1,3 @@
-/// <reference path="IndexCtrl.ts" />
 
 interface IMainScope extends ng.IScope {
 	index:IndexCtrl;
@@ -7,19 +6,10 @@ interface IMainScope extends ng.IScope {
 }
 class IndexCtrl {
 
-	constructor(public $scope:IMainScope, public $state:ng.ui.IStateService, public toastr:Toastr, public DataService:DataService) {
+	constructor(public $scope:IMainScope, public DataService:DataService) {
 		$scope.error = false;
 
 		$scope.index = this;
-	}
-
-	ShowSuccess(note:string) {
-
-		this.toastr.info(note);
-	}
-
-	ShowError(note:string) {
-		this.toastr.error(note);
 	}
 
 }

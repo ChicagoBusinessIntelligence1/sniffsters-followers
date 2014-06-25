@@ -3,19 +3,13 @@
 	"app": "followers",
 	"version": "0.0.0",
 	"dependencies": {
-		"angular": "*",
 		"json3": "*",
 		"jquery": "*",
-		"angular-bootstrap": "*",
 		"es5-shim": "*",
 		"bootstrap": "*",
-		"toastr": "*",
-		"angular-animate": "*",
-		"angular-ui-router": "*"
+		"toastr": "*"
 	},
 	"devDependencies": {
-		"angular-mocks": "*",
-		"angular-scenario": "*",
 		"DefinitelyTyped": "*",
 		"underscore": "~1.6.0"
 	}

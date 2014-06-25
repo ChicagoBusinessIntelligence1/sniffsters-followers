@@ -1,8 +1,9 @@
-/// <reference path="controllers/IndexCtrl.ts" />
 /// <reference path="services/DataService.ts" />
+/// <reference path="controllers/IndexCtrl.ts" />
 //#ref
 
-var followers = angular.module("followers", ['ui.router', 'angularFileUpload', 'ngAnimate', 'ui.bootstrap.modal', 'ui.bootstrap', 'ui.bootstrap.tpls']);
+var followers = angular.module("followers", []);
+//followers.value("toastr", Toastr)
 
 //#filt
 
@@ -15,17 +16,16 @@ followers.controller("IndexCtrl", IndexCtrl);
 //#ctrl
 
 // TODO: Implement filter
-followers.value("toastr", toastr)
 
-followers.config(
-	($stateProvider, $urlRouterProvider) => {
-		$urlRouterProvider.otherwise("/");
-
-		$stateProvider
-			.state("followers", {
-				url: "/followers",
-				templateUrl: "../views/followers.html"
-			})
-//#state
-	});
+//followers.config(
+//	($stateProvider, $urlRouterProvider) => {
+//		$urlRouterProvider.otherwise("/");
+//
+//		$stateProvider
+//			.state("followers", {
+//				url: "/followers",
+//				templateUrl: "../views/followers.html"
+//			})
+////#state
+//	});
 

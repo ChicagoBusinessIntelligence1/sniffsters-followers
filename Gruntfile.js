@@ -351,7 +351,7 @@ module.exports = function (grunt) {
 					mangle: false
 				},
 				files: {
-					'app/profile.js': ['vs/**/*.js']
+					'app/followers.js': ['vs/**/*.js']
 				}
 
 			}
@@ -363,7 +363,7 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				src: ['vs/{,*/}*.js' ],
-				dest: 'app/profile.js'
+				dest: 'app/followers.js'
 			}
 		},
 		ftp: {
@@ -375,8 +375,8 @@ module.exports = function (grunt) {
 			},
 			upload: {
 				files: [
-					{"site/wwwroot/Scripts/app/profile/": 'profile.js'},
-					{"site/wwwroot/Scripts/app/profile/": 'templates.cshtml'}
+					{"site/wwwroot/Scripts/app/followers/": 'followers.js'},
+					{"site/wwwroot/Scripts/app/followers/": 'templates.cshtml'}
 				]
 			}
 		}
@@ -394,13 +394,13 @@ module.exports = function (grunt) {
 	});
 
 
-	grunt.registerTask('copy-profile-to-root', function () {
-		var address = 'app/profile.js';
+	grunt.registerTask('copy-followers-to-root', function () {
+		var address = 'app/followers.js';
 		var content = grunt.file.read(address);
 		content = content.replace(/http:\/\/localhost:44300/g, '');
 
 		grunt.file.write(address, content);
-		grunt.file.copy('app/profile.js', 'profile.js');
+		grunt.file.copy('app/followers.js', 'followers.js');
 	});
 
 
@@ -462,13 +462,13 @@ module.exports = function (grunt) {
 
 		grunt.task.run('cssmin');
 		var tempFile = grunt.file.read('templates.cshtml');
-		var cssFile = '<style>' + grunt.file.read('app/styles/Profile.min.css') + '</style>';
+		var cssFile = '<style>' + grunt.file.read('app/styles/followers.min.css') + '</style>';
 
 		var fileContent = tempFile + cssFile;
 
 
-		fileContent = fileContent.replace(/imgdir\//g, '/Scripts/app/profile/app/imgdir/');
-		fileContent = fileContent.replace(/..\/..\/img\//g, '/Scripts/app/profile/app/img/');
+		fileContent = fileContent.replace(/imgdir\//g, '/Scripts/app/followers/app/imgdir/');
+		fileContent = fileContent.replace(/..\/..\/img\//g, '/Scripts/app/followers/app/img/');
 
 		grunt.file.write('templates.cshtml', fileContent);
 
@@ -479,8 +479,8 @@ module.exports = function (grunt) {
 			grunt.file.delete('vs');
 		}
 
-		if (grunt.file.exists('app/profile.js')) {
-			grunt.file.delete('app/profile.js');
+		if (grunt.file.exists('app/followers.js')) {
+			grunt.file.delete('app/followers.js');
 		}
 	});
 	grunt.registerTask('vs', function () {
@@ -489,7 +489,7 @@ module.exports = function (grunt) {
 		grunt.task.run(['move-app-to-z']);
 		grunt.task.run(['uglify:minvs']);
 //        grunt.task.run(['concat']);
-		grunt.task.run(['copy-profile-to-root']);
+		grunt.task.run(['copy-followers-to-root']);
 		grunt.task.run(['templates']);
 		grunt.task.run(['addcss']);
 		grunt.task.run(['clean']);
@@ -528,15 +528,15 @@ module.exports = function (grunt) {
 
 		// register
 		var ref = '/// <reference path="controllers/' + name + 'Ctrl.ts" />\r\n';
-		var reg = 'profile.controller("' + name + 'Ctrl", ' + name + 'Ctrl);\r\n';
+		var reg = 'followers.controller("' + name + 'Ctrl", ' + name + 'Ctrl);\r\n';
 		var state = '\t\t\t\t.state("' + lname + '", {\r\n' +
-			'\t\t\t\t\turl: "/profile/' + lname + '", \r\n' +
+			'\t\t\t\t\turl: "/followers/' + lname + '", \r\n' +
 			'\t\t\t\t\tcontroller:"' + name + 'Ctrl",\r\n' +
-			'\t\t\t\t\ttemplateUrl: "../views/profile-' + lname + '.html"\r\n' +
+			'\t\t\t\t\ttemplateUrl: "../views/followers-' + lname + '.html"\r\n' +
 			'\t\t\t\t})\r\n';
 
 		var apath = 'app/scripts/app.ts';
-		var tpath = 'app/views/profile-' + lname + '.html';
+		var tpath = 'app/views/followers-' + lname + '.html';
 		var app = grunt.file.read(apath);
 		if (rm) {
 			app = removeFromInside(app, ref);
@@ -613,7 +613,7 @@ module.exports = function (grunt) {
 
 		// register
 		var ref = '/// <reference path="services/' + name + 'Service.ts" />\r\n';
-		var reg = 'profile.service("' + name + 'Service", ' + name + 'Service);\r\n';
+		var reg = 'followers.service("' + name + 'Service", ' + name + 'Service);\r\n';
 
 
 		var apath = 'app/scripts/app.ts';
@@ -688,7 +688,7 @@ module.exports = function (grunt) {
 
 		// register
 		var ref = '/// <reference path="filters/' + name + '.ts" />\r\n';
-		var reg = "profile.filter('" + jname + "', () => {" +
+		var reg = "followers.filter('" + jname + "', () => {" +
 			" return (value:boolean):string => {" +
 			"return " + name + ".filter(value);     } });\r\n";
 
@@ -782,7 +782,7 @@ module.exports = function (grunt) {
 		}
 
 
-		var reg = 'profile.directive("' + jname + '", ' + jname + ');\r\n';
+		var reg = 'followers.directive("' + jname + '", ' + jname + ');\r\n';
 ////////////////
 
 //     Specs   //
