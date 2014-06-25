@@ -1,8 +1,14 @@
 var followers = angular.module("followers", ['ui.router', 'ngAnimate']);
 
+followers.filter('spacesToDashes', function () {
+    return function (value) {
+        return SpacesToDashes.filter(value);
+    };
+});
+
 followers.service("DataService", DataService);
 
-followers.directive("followUser", followUser);
+followers.directive("followInfo", followInfo);
 
 followers.controller("IndexCtrl", IndexCtrl);
 

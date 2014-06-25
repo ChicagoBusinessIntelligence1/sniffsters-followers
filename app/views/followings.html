@@ -1,7 +1,14 @@
 <div>
-	<ul class="list-unstyled">
-		<li ng-repeat="f in index.Followings">
-			{{f.NickName}}
-		</li>
-	</ul>
+	<h3>Followings</h3>
+	<hr/>
+
+	<div class="row">
+		<div class="col-md-2">
+			<ul class="list-unstyled">
+				<li ng-repeat="f in index.Followings">
+					<follow-info f="f"></follow-info>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>

@@ -1,17 +1,19 @@
 /// <reference path="services/DataService.ts" />
 /// <reference path="controllers/IndexCtrl.ts" />
-/// <reference path="directives/followUser.ts" />
+/// <reference path="directives/followInfo.ts" />
+/// <reference path="filters/SpacesToDashes.ts" />
 //#ref
 
 var followers = angular.module("followers", ['ui.router', 'ngAnimate']);
 //followers.value("toastr", Toastr)
 
+followers.filter('spacesToDashes', () => { return (value:string):string => {return SpacesToDashes.filter(value);     } });
 //#filt
 
 followers.service("DataService", DataService);
 //#serv
 
-followers.directive("followUser", followUser);
+followers.directive("followInfo", followInfo);
 //#dir
 
 followers.controller("IndexCtrl", IndexCtrl);
