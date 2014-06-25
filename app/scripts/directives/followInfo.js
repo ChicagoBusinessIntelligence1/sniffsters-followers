@@ -5,7 +5,9 @@ var followInfo = function () {
         templateUrl: 'views/directives/follow-info.html',
         replace: true,
         scope: {
-            f: '='
+            f: '=',
+            ctrl: '=',
+            arrIndex: '@'
         },
         link: function (scope, element, attrs) {
         }

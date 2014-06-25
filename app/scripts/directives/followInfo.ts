@@ -12,7 +12,9 @@ var followInfo:() => ng.IDirective = () => {
         // replace directive tag with template info
         replace: true,
         scope: {
-            f: '='
+            f: '=',
+            ctrl:'=',
+            arrIndex:'@'
 
         },
         link: (scope:IFollowInfo, element:ng.IAugmentedJQuery, attrs:ng.IAttributes) => {

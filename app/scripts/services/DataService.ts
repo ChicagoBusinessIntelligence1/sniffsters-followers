@@ -18,4 +18,17 @@ class DataService {
         return d.promise;
     }
 
+    unfollow<T>(id:string) {
+        var d = this.$q.defer();
+
+        this.$http.post('http://localhost:44300/Followers/Unfollow', {
+            id: id
+        })
+            .success(() => {
+                d.resolve();
+            }).error(() => {
+                d.reject();
+            });
+        return d.promise;
+    }
 }
