@@ -9,6 +9,7 @@ class IndexCtrl {
 	constructor(public $scope:IMainScope, public DataService:DataService) {
 		$scope.error = false;
 
+
 		$scope.index = this;
 	}
 
