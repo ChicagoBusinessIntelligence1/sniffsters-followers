@@ -2,6 +2,8 @@ var followers = angular.module("followers", ['ui.router', 'ngAnimate']);
 
 followers.service("DataService", DataService);
 
+followers.directive("followUser", followUser);
+
 followers.controller("IndexCtrl", IndexCtrl);
 
 followers.config(function ($stateProvider, $urlRouterProvider) {

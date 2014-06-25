@@ -1,5 +1,6 @@
 /// <reference path="services/DataService.ts" />
 /// <reference path="controllers/IndexCtrl.ts" />
+/// <reference path="directives/followUser.ts" />
 //#ref
 
 var followers = angular.module("followers", ['ui.router', 'ngAnimate']);
@@ -10,6 +11,7 @@ var followers = angular.module("followers", ['ui.router', 'ngAnimate']);
 followers.service("DataService", DataService);
 //#serv
 
+followers.directive("followUser", followUser);
 //#dir
 
 followers.controller("IndexCtrl", IndexCtrl);
