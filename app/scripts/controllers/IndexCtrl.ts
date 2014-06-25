@@ -13,4 +13,14 @@ class IndexCtrl {
         $scope.index = this;
     }
 
+    unfollow(id:string, index:number){
+       this.DataService.unfollow(id).then(() => {
+//success
+           this.Followings.splice(index, 1);
+       }, () => {
+//           error
+           console.log("Error. Check Db Connection")
+       })
+
+    }
 }

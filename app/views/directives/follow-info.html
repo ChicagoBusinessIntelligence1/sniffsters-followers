@@ -1,0 +1,8 @@
+<div class="well">
+	<div class="thumbnail">
+		<img class="puppyPic"
+		     ng-src="{{('imgdir/'+f.UserName+'/myimg/mainpic.jpg') | spacesToDashes}}">
+	</div>
+	<span>{{f.NickName}}</span>
+	<button ng-click="ctrl.unfollow(f.Id,arrIndex)">Unfollow</button>
+</div>
