@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{profile node_modules}" />
     <file url="file://$PROJECT_DIR$/app/scripts/app.ts" libraries="{toastr-DefinitelyTyped}" />
     <file url="file://$PROJECT_DIR$/app/scripts/controllers/IndexCtrl.ts" libraries="{angular-ui-DefinitelyTyped, angularjs-DefinitelyTyped}" />
     <file url="file://$PROJECT_DIR$/app/scripts/models/IBreederProfile.ts" libraries="{angular-ui-DefinitelyTyped, angularjs-DefinitelyTyped}" />
-    <file url="PROJECT" libraries="{angular-ui-DefinitelyTyped, angularjs-DefinitelyTyped, jQuery-2.0.0, toastr-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/app/scripts/services/DataService.ts" libraries="{angularjs-DefinitelyTyped}" />
+    <file url="PROJECT" libraries="{angular-ui-DefinitelyTyped, angularjs-DefinitelyTyped, toastr-DefinitelyTyped}" />
     <excludedPredefinedLibrary name="HTML" />
   </component>
 </project>

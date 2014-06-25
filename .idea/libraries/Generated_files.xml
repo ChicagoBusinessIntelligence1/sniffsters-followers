@@ -2,12 +2,12 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/app/scripts/app.js" />
-        <item url="file://$PROJECT_DIR$/test/spec/controllers/TestimonialsCtrlSpec.js" />
-        <item url="file://$PROJECT_DIR$/test/spec/controllers/PhotosCtrlSpec.js" />
-        <item url="file://$PROJECT_DIR$/test/spec/controllers/DetailsEditCtrlSpec.js" />
-        <item url="file://$PROJECT_DIR$/test/spec/controllers/EditCtrlSpec.js" />
         <item url="file://$PROJECT_DIR$/test/spec/controllers/PhotosEditCtrlSpec.js" />
+        <item url="file://$PROJECT_DIR$/test/spec/controllers/EditCtrlSpec.js" />
+        <item url="file://$PROJECT_DIR$/test/spec/controllers/DetailsEditCtrlSpec.js" />
+        <item url="file://$PROJECT_DIR$/app/scripts/app.js" />
+        <item url="file://$PROJECT_DIR$/test/spec/controllers/PhotosCtrlSpec.js" />
+        <item url="file://$PROJECT_DIR$/test/spec/controllers/TestimonialsCtrlSpec.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -146,12 +146,12 @@
       <root url="file://$PROJECT_DIR$/app/scripts/directives/aboutInfoEdit.js" />
       <root url="file://$PROJECT_DIR$/app/scripts/directives/detailsInfoEdit.js" />
       <root url="file://$PROJECT_DIR$/app/scripts/models/IFeedback.js" />
+      <root url="file://$PROJECT_DIR$/test/spec/controllers/PhotosEditCtrlSpec.js" />
+      <root url="file://$PROJECT_DIR$/test/spec/controllers/EditCtrlSpec.js" />
+      <root url="file://$PROJECT_DIR$/test/spec/controllers/DetailsEditCtrlSpec.js" />
       <root url="file://$PROJECT_DIR$/app/scripts/app.js" />
       <root url="file://$PROJECT_DIR$/test/spec/controllers/TestimonialsCtrlSpec.js" />
       <root url="file://$PROJECT_DIR$/test/spec/controllers/PhotosCtrlSpec.js" />
-      <root url="file://$PROJECT_DIR$/test/spec/controllers/DetailsEditCtrlSpec.js" />
-      <root url="file://$PROJECT_DIR$/test/spec/controllers/EditCtrlSpec.js" />
-      <root url="file://$PROJECT_DIR$/test/spec/controllers/PhotosEditCtrlSpec.js" />
     </CLASSES>
     <SOURCES />
   </library>
