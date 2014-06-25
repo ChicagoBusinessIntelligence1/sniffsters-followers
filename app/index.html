@@ -18,7 +18,7 @@
 	<!-- build:css({.tmp,app}) styles/main.css -->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/toastr/toastr.min.css">
-	<link rel="stylesheet" href="styles/profile.css">
+	<link rel="stylesheet" href="styles/followers.css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
 	<!-- endbuild -->
@@ -46,7 +46,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href=/>
+			<a href="">
 			<img src="img/Sniffsters-Log.png" alt="...">
 			</a>
 		</div>
@@ -111,14 +111,15 @@
 					<ul class="nav nav-stacked">
 						<li><a href="/Breeder-Profile">My Profile</a></li>
 						<li><a href="/Messages/Index">Messages</a></li>
-						<li><a class="active" href="#">Followers</a></li>
+						<li class="active" ><a href="#">Followers</a></li>
 					</ul>
 
 				</div>
 
 				<div class="container">
 
-					<div ng-controller="IndexCtrl as index" ui-view ng-hide="index.error">
+					<div  ui-view ng-hide="index.error">
+
 					</div>
 
 					<div ng-show="index.error" class="panel panel-danger">Error in Database request. Check
@@ -152,10 +153,10 @@
 <!--<script src="bower_components/ng-file-upload/angular-file-upload-shim.js"></script>-->
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
 <!--<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>-->
 
 <!--<script src="bower_components/angular-bootstrap/ui-bootstrap-custom-tpls-0.10.0.js"></script>-->
-<!--<script src="bower_components/angular-animate/angular-animate.js"></script>-->
 <!--<script src="bower_components/ng-file-upload/angular-file-upload.js"></script>-->
 
 <!-- build:js scripts/plugins.js -->
@@ -169,8 +170,8 @@
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/services/DataService.js"></script>
 <!-- links -->
-<script src="scripts/controllers/IndexCtrl.js"></script>
 <script src="scripts/models/IBreederProfile.js"></script>
+<script src="scripts/controllers/IndexCtrl.js"></script>
 <script src="scripts/app.js"></script>
 <!-- endbuild -->
 

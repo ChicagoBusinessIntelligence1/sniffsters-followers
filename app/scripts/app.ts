@@ -2,7 +2,7 @@
 /// <reference path="controllers/IndexCtrl.ts" />
 //#ref
 
-var followers = angular.module("followers", []);
+var followers = angular.module("followers", ['ui.router', 'ngAnimate']);
 //followers.value("toastr", Toastr)
 
 //#filt
@@ -17,15 +17,21 @@ followers.controller("IndexCtrl", IndexCtrl);
 
 // TODO: Implement filter
 
-//followers.config(
-//	($stateProvider, $urlRouterProvider) => {
-//		$urlRouterProvider.otherwise("/");
-//
-//		$stateProvider
-//			.state("followers", {
-//				url: "/followers",
-//				templateUrl: "../views/followers.html"
-//			})
-////#state
-//	});
+followers.config(
+    ($stateProvider, $urlRouterProvider) => {
+        $urlRouterProvider.otherwise("/followings");
+
+        $stateProvider
+            .state("followings", {
+                url: "/followings",
+                templateUrl: "../views/followings.html",
+                controller:IndexCtrl,
+                resolve: {
+                    followings: (DataService:DataService) => {
+                        return DataService.getFollowings<IFollowUser>();
+                    }
+                }
+            })
+//#state
+    });
 
