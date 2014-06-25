@@ -6,8 +6,8 @@
         <item url="file://$PROJECT_DIR$/test/spec/controllers/EditCtrlSpec.js" />
         <item url="file://$PROJECT_DIR$/test/spec/controllers/DetailsEditCtrlSpec.js" />
         <item url="file://$PROJECT_DIR$/app/scripts/app.js" />
-        <item url="file://$PROJECT_DIR$/test/spec/controllers/PhotosCtrlSpec.js" />
         <item url="file://$PROJECT_DIR$/test/spec/controllers/TestimonialsCtrlSpec.js" />
+        <item url="file://$PROJECT_DIR$/test/spec/controllers/PhotosCtrlSpec.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -150,8 +150,8 @@
       <root url="file://$PROJECT_DIR$/test/spec/controllers/EditCtrlSpec.js" />
       <root url="file://$PROJECT_DIR$/test/spec/controllers/DetailsEditCtrlSpec.js" />
       <root url="file://$PROJECT_DIR$/app/scripts/app.js" />
-      <root url="file://$PROJECT_DIR$/test/spec/controllers/TestimonialsCtrlSpec.js" />
       <root url="file://$PROJECT_DIR$/test/spec/controllers/PhotosCtrlSpec.js" />
+      <root url="file://$PROJECT_DIR$/test/spec/controllers/TestimonialsCtrlSpec.js" />
     </CLASSES>
     <SOURCES />
   </library>
