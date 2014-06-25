@@ -38,6 +38,11 @@ var removeFromInside = function (target, remove) {
 
 module.exports = function (grunt) {
 
+////////////////////////////
+	var moduleName = "followers";
+////////////////////////////
+
+
 	var delFileDep = function (fileName) {
 		var arrExt = ['ts', 'js', 'js.map'];
 

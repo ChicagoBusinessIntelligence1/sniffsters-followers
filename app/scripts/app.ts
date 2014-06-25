@@ -6,12 +6,12 @@ var followers = angular.module("followers", ['ui.router', 'angularFileUpload', '
 
 //#filt
 
-profile.service("DataService", DataService);
+followers.service("DataService", DataService);
 //#serv
 
 //#dir
 
-profile.controller("IndexCtrl", IndexCtrl);
+followers.controller("IndexCtrl", IndexCtrl);
 //#ctrl
 
 // TODO: Implement filter
@@ -25,11 +25,6 @@ followers.config(
 			.state("followers", {
 				url: "/followers",
 				templateUrl: "../views/followers.html"
-			})
-			.state("Index", {
-				url: "/profile/Index",
-				controller: "IndexCtrl",
-				templateUrl: "../views/profile-Index.html"
 			})
 //#state
 	});

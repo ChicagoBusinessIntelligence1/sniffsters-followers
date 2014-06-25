@@ -16,6 +16,7 @@
 	"devDependencies": {
 		"angular-mocks": "*",
 		"angular-scenario": "*",
-		"DefinitelyTyped": "*"
+		"DefinitelyTyped": "*",
+		"underscore": "~1.6.0"
 	}
 }
