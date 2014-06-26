@@ -1,14 +1,19 @@
-<div>
-	<h3>Followings</h3>
-	<hr/>
+<div class="row">
+	<div class="col-md-6 cont jumbotron jumbo-custom">
+		<h3>Followings</h3>
+		<hr/>
 
-	<div class="row">
-		<div class="col-md-2">
-			<ul class="list-unstyled">
-				<li ng-repeat="f in index.Followings">
-					<follow-info ctrl="index" f="f" arr-index="{{$index}}"></follow-info>
-				</li>
-			</ul>
+		<div class="row">
+			<div class="col-md-4">
+				<ul class="list-unstyled">
+					<li ng-repeat="f in index.Followings">
+						<follow-info ctrl="index" f="f" arr-index="{{$index}}"></follow-info>
+					</li>
+				</ul>
+			</div>
 		</div>
+	</div>
+	<div class="col-xs-4">
+
 	</div>
 </div>
