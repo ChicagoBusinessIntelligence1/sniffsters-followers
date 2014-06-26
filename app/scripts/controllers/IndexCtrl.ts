@@ -1,26 +1,29 @@
 interface IMainScope extends ng.IScope {
-    index:IndexCtrl;
-    error:boolean;
-    ctrl:IndexCtrl;
+	index:IndexCtrl;
+	error:boolean;
+	ctrl:IndexCtrl;
 }
 class IndexCtrl {
-    Followings:IFollowUser[];
+	Followings:IFollowUser[];
+	NotFollowings:IFollowUser[];
 
-    constructor(public $scope:IMainScope, followings:IFollowUser[], public DataService:DataService) {
-        this.Followings= followings;
-        $scope.error = false;
+	constructor(public $scope:IMainScope, allFollowings:IAllFollowings, public DataService:DataService) {
+		this.Followings = allFollowings.Followings;
 
-        $scope.index = this;
-    }
+		this.NotFollowings = allFollowings.NotFollowings;
+		$scope.error = false;
 
-    unfollow(id:string, index:number){
-       this.DataService.unfollow(id).then(() => {
+		$scope.index = this;
+	}
+
+	unfollow(id:string, index:number) {
+		this.DataService.unfollow(id).then(() => {
 //success
-           this.Followings.splice(index, 1);
-       }, () => {
+			this.Followings.splice(index, 1);
+		}, () => {
 //           error
-           console.log("Error. Check Db Connection")
-       })
+			console.log("Error. Check Db Connection")
+		})
 
-    }
+	}
 }

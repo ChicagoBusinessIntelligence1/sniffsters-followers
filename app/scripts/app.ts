@@ -31,8 +31,8 @@ followers.config(
                 templateUrl: "../views/followings.html",
                 controller:IndexCtrl,
                 resolve: {
-                    followings: (DataService:DataService) => {
-                        return DataService.getFollowings<IFollowUser>();
+	                allFollowings: (DataService:DataService) => {
+		                return DataService.getFollowings<IAllFollowings>();
                     }
                 }
             })
