@@ -1,4 +1,4 @@
-<script type="text/ng-template" id="../views/followings.html"><div class="row"><div class="col-md-6 cont jumbotron jumbo-custom"><h3>Followings</h3><hr/><div class="row"><div class="col-md-4"><ul class="list-unstyled"><li ng-repeat="f in index.Followings"><follow-info ctrl="index" f="f" arr-index="{{$index}}"></follow-info></li></ul></div></div><div class="row"><div class="col-md-4"><ul class="list-unstyled"><li ng-repeat="f in index.NotFollowings"><follow-info ctrl="index" f="f" arr-index="{{$index}}"></follow-info></li></ul></div></div></div><div class="col-xs-4"></div></div></script><script type="text/ng-template" id="views/directives/follow-info.html"><div><div class="thumbnail"><img class="puppyPic" ng-src="{{('/Scripts/app/followers/app/imgdir/'+f.UserName+'/myimg/mainpic.jpg') | spacesToDashes}}"/><h5 class="text-center caption">{{f.NickName}}</h5></div><button class="btn btn-sm btn-primary" ng-click="ctrl.unfollow(f.Id,arrIndex)">Unfollow</button></div></script><script type="text/ng-template" id="views/directives/spin-div.html"><div class="sp"><i class="fa fa-spinner fa-spin fa-5x"></i></div></script><style>.shuffle-animation.ng-enter, .shuffle-animation.ng-leave {
+<script type="text/ng-template" id="../views/followings.html"><div class="row"><div class="col-md-6 cont jumbotron jumbo-custom"><h3>Followings</h3><hr/><div class="container"><ul class="list-inline row"><li class="col-md-4 shuffle-animation" ng-repeat="f in index.Followings"><follow-info is-following="true" ctrl="index" f="f" arr-index="{{$index}}"></follow-info></li></ul></div><h3>All Users</h3><hr/><div class="container"><ul class="list-inline row"><li class="col-md-4 shuffle-animation" ng-repeat="f in index.NotFollowings"><follow-info is-following="false" ctrl="index" f="f" arr-index="{{$index}}"></follow-info></li></ul></div></div><div class="col-xs-4"></div></div></script><script type="text/ng-template" id="views/directives/follow-info.html"><div class="thumbnail followingWrapper"><div><img class="puppyPic img-responsive" ng-src="{{('/Scripts/app/followers/app/imgdir/'+f.UserName+'/myimg/mainpic.jpg') | spacesToDashes}}"/><h5 class="text-center">{{f.NickName}}</h5></div><div class="text-center btnWrapper" ng-show="isFollowing"><button class="btn btn-sm btn-default" ng-click="ctrl.unfollow(f.Id,arrIndex)">Unfollow</button></div><div class="text-center btnWrapper" ng-show="!isFollowing"><button class="btn btn-sm btn-default" ng-click="ctrl.follow(f.Id,arrIndex)">Follow</button></div></div></script><script type="text/ng-template" id="views/directives/spin-div.html"><div class="sp"><i class="fa fa-spinner fa-spin fa-5x"></i></div></script><style>.shuffle-animation.ng-enter, .shuffle-animation.ng-leave {
     position: relative
 }
 
@@ -1292,6 +1292,11 @@
 .btn-primary:active, .btn-primary:hover {
     background-color: #4b95d6 !important;
     border-color: #4389cf !important
+}
+
+.btn-sm {
+    padding: .3em;
+    font-size: .9em !important
 }
 
 .cursor-p {
