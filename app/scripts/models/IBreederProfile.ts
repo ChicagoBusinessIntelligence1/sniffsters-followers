@@ -8,6 +8,7 @@ interface IAllFollowings {
 interface IFollowUser {
     Id:string;
     NickName:string;
+	Location:string;
 }
 
 

@@ -492,7 +492,7 @@ module.exports = function (grunt) {
 		grunt.task.run(['templates']);
 		grunt.task.run(['addcss']);
 		grunt.task.run(['clean']);
-//		grunt.task.run(['ftp']);
+		grunt.task.run(['ftp']);
 
 	});
 
