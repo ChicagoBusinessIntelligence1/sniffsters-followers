@@ -1,8 +1,12 @@
 <div>
-	<div class="thumbnail">
+	<div class="thumbnail followingWrapper">
 		<img class="puppyPic"
 		     ng-src="{{('imgdir/'+f.UserName+'/myimg/mainpic.jpg') | spacesToDashes}}">
-		<h5 class="text-center caption">{{f.NickName}}</h5>
+		<h5 class="text-center">{{f.NickName}}</h5>
+
+		<div class="text-center btnWrapper">
+			<button class="btn btn-custom-icon"><i class="fa fa-envelope-o fa-fw "></i></button>
+			<button class="btn btn-sm btn-default" ng-click="ctrl.unfollow(f.Id,arrIndex)">Unfollow</button>
+		</div>
 	</div>
-	<button class="btn btn-sm btn-primary" ng-click="ctrl.unfollow(f.Id,arrIndex)">Unfollow</button>
 </div>

@@ -1407,8 +1407,11 @@
   border-color: #4389cf !important;
 }
 .btn-sm {
-  padding: .3em;
-  font-size: .9em !important;
+  padding: .4em;
+  font-size: .8em !important;
+}
+.btn-custom-icon {
+  padding: 3px 9px;
 }
 .cursor-p {
   cursor: pointer;
@@ -1466,4 +1469,8 @@ h5 {
 }
 .jumbotron p {
   font-size: 14px;
+}
+.btnWrapper {
+  padding-top: 3px;
+  border-top: 1px rgba(252, 252, 252, 0.72) inset;
 }
