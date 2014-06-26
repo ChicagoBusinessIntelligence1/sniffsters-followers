@@ -9,6 +9,7 @@ followers.filter('spacesToDashes', function () {
 followers.service("DataService", DataService);
 
 followers.directive("followInfo", followInfo);
+followers.directive("spinDiv", spinDiv);
 
 followers.controller("IndexCtrl", IndexCtrl);
 

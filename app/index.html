@@ -120,11 +120,10 @@
 
 				<div class="container" ng-controller="IndexCtrl as index">
 
-					<div ng-show="isViewLoading">Loading</div>
-
-					<div ui-view ng-show="!isViewLoading" >
-
+					<div ui-view ng-show="!isViewLoading">
 					</div>
+					<spin-div ng-show="isViewLoading"></spin-div>
+
 
 					<div ng-show="index.error" class="panel panel-danger">Error in Database request. Check
 						Internet Connection
@@ -174,6 +173,7 @@
 <script src="scripts/services/DataService.js"></script>
 <script src="scripts/directives/followInfo.js"></script>
 <script src="scripts/filters/SpacesToDashes.js"></script>
+<script src="scripts/directives/spinDiv.js"></script>
 <!-- links -->
 <script src="scripts/models/IBreederProfile.js"></script>
 <script src="scripts/controllers/IndexCtrl.js"></script>

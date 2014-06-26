@@ -2,6 +2,7 @@
 /// <reference path="controllers/IndexCtrl.ts" />
 /// <reference path="directives/followInfo.ts" />
 /// <reference path="filters/SpacesToDashes.ts" />
+/// <reference path="directives/spinDiv.ts" />
 //#ref
 
 var followers = angular.module("followers", ['ui.router', 'ngAnimate']);
@@ -14,6 +15,7 @@ followers.service("DataService", DataService);
 //#serv
 
 followers.directive("followInfo", followInfo);
+followers.directive("spinDiv", spinDiv);
 //#dir
 
 followers.controller("IndexCtrl", IndexCtrl);
