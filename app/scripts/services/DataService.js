@@ -26,5 +26,17 @@ var DataService = (function () {
         });
         return d.promise;
     };
+    DataService.prototype.follow = function (id) {
+        var d = this.$q.defer();
+
+        this.$http.post('http://localhost:44300/Followers/Follow', {
+            id: id
+        }).success(function () {
+            d.resolve();
+        }).error(function () {
+            d.reject();
+        });
+        return d.promise;
+    };
     return DataService;
 })();

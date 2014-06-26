@@ -3,27 +3,31 @@
 		<h3>Followings</h3>
 		<hr/>
 
-		<div class="row">
-			<div class="col-sm-4">
-				<ul class="list-unstyled">
-					<li ng-repeat="f in index.Followings">
-						<follow-info ctrl="index" f="f" arr-index="{{$index}}"></follow-info>
-					</li>
-				</ul>
-			</div>
+		<div class="container">
+			<ul class="list-inline row">
+				<li class="col-md-4" ng-repeat="f in index.Followings">
+					<div class="thumbnail followingWrapper">
+						<follow-info is-following="true" ctrl="index" f="f" arr-index="{{$index}}"></follow-info>
+					</div>
+				</li>
+			</ul>
 		</div>
 
-		<div class="row">
-			<div class="col-md-4">
-				<ul class="list-unstyled">
-					<li ng-repeat="f in index.NotFollowings">
-						<follow-info ctrl="index" f="f" arr-index="{{$index}}"></follow-info>
-					</li>
-				</ul>
-			</div>
+
+		<h3>All Users</h3>
+		<hr/>
+
+		<div class="container">
+			<ul class="list-inline row">
+				<li class="col-md-4" ng-repeat="f in index.NotFollowings">
+					<div class="thumbnail followingWrapper">
+						<follow-info is-following="false" ctrl="index" f="f" arr-index="{{$index}}"></follow-info>
+					</div>
+				</li>
+			</ul>
 		</div>
+
 	</div>
 	<div class="col-xs-4">
-
 	</div>
 </div>

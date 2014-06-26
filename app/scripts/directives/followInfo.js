@@ -7,7 +7,8 @@ var followInfo = function () {
         scope: {
             f: '=',
             ctrl: '=',
-            arrIndex: '@'
+            arrIndex: '@',
+            isFollowing: '='
         }
     };
 };

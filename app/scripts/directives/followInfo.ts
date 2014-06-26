@@ -14,7 +14,8 @@ var followInfo:() => ng.IDirective = () => {
         scope: {
             f: '=',
             ctrl:'=',
-            arrIndex:'@'
+            arrIndex:'@',
+            isFollowing:'='
 
         }
     }
