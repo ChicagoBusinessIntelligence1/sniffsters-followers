@@ -5,9 +5,9 @@ class DataService {
     }
 
     getFollowings<T>() {
-        var d = this.$q.defer<T[]>();
+	    var d = this.$q.defer<T>();
 
-        this.$http.get('http://localhost:44300/Followers/GetFollowings').success((result:T[]) => {
+	    this.$http.get('http://localhost:44300/Followers/GetFollowings').success((result:T) => {
 
             d.resolve(result);
         }).error((data, error) => {

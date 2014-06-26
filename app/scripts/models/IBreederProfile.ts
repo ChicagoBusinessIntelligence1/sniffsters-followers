@@ -1,3 +1,10 @@
+interface IAllFollowings {
+
+	Followings:IFollowUser[]
+	NotFollowings:IFollowUser[]
+
+}
+
 interface IFollowUser {
     Id:string;
     NickName:string;

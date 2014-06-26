@@ -1,6 +1,6 @@
 var IndexCtrl = function () {
-	function IndexCtrl($scope, followings, DataService) {
-		this.$scope = $scope, this.DataService = DataService, this.Followings = followings, $scope.error = !1, $scope.index = this
+	function IndexCtrl($scope, allFollowings, DataService) {
+		this.$scope = $scope, this.DataService = DataService, this.Followings = allFollowings.Followings, this.NotFollowings = allFollowings.NotFollowings, $scope.error = !1, $scope.index = this
 	}
 
 	return IndexCtrl.prototype.unfollow = function (id, index) {
@@ -46,7 +46,7 @@ followers.filter("spacesToDashes", function () {
 		return SpacesToDashes.filter(value)
 	}
 }), followers.service("DataService", DataService), followers.directive("followInfo", followInfo), followers.controller("IndexCtrl", IndexCtrl), followers.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $urlRouterProvider) {
-	$urlRouterProvider.otherwise("/followings"), $stateProvider.state("followings", {url: "/followings", templateUrl: "../views/followings.html", controller: IndexCtrl, resolve: {followings: function (DataService) {
+	$urlRouterProvider.otherwise("/followings"), $stateProvider.state("followings", {url: "/followings", templateUrl: "../views/followings.html", controller: IndexCtrl, resolve: {allFollowings: function (DataService) {
 		return DataService.getFollowings()
 	}}})
 }]);
