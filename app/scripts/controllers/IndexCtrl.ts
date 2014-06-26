@@ -1,16 +1,22 @@
 interface IMainScope extends ng.IScope {
     index:IndexCtrl;
     error:boolean;
+    isViewLoading:boolean;
     ctrl:IndexCtrl;
 }
 class IndexCtrl {
     Followings:IFollowUser[];
     NotFollowings:IFollowUser[];
 
-    constructor(public $scope:IMainScope, allFollowings, public DataService:DataService) {
+    constructor(public $scope:IMainScope, public DataService:DataService) {
+        $scope.isViewLoading = true;
+        DataService.getFollowings().then((allFollowings:IAllFollowings)=> {
+
         this.Followings = allFollowings.Followings;
 
         this.NotFollowings = allFollowings.NotFollowings;
+        $scope.isViewLoading = false;
+        })
         $scope.error = false;
 
         $scope.index = this;

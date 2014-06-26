@@ -18,11 +18,6 @@ followers.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.state("followings", {
         url: "/followings",
         templateUrl: "../views/followings.html",
-        controller: IndexCtrl,
-        resolve: {
-            allFollowings: function (DataService) {
-                return DataService.getFollowings();
-            }
-        }
+        controller: IndexCtrl
     });
 });

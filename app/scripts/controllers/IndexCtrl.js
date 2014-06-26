@@ -1,10 +1,15 @@
 var IndexCtrl = (function () {
-    function IndexCtrl($scope, allFollowings, DataService) {
+    function IndexCtrl($scope, DataService) {
+        var _this = this;
         this.$scope = $scope;
         this.DataService = DataService;
-        this.Followings = allFollowings.Followings;
+        $scope.isViewLoading = true;
+        DataService.getFollowings().then(function (allFollowings) {
+            _this.Followings = allFollowings.Followings;
 
-        this.NotFollowings = allFollowings.NotFollowings;
+            _this.NotFollowings = allFollowings.NotFollowings;
+            $scope.isViewLoading = false;
+        });
         $scope.error = false;
 
         $scope.index = this;

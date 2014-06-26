@@ -29,12 +29,7 @@ followers.config(
             .state("followings", {
                 url: "/followings",
                 templateUrl: "../views/followings.html",
-                controller:IndexCtrl,
-                resolve: {
-	                allFollowings: (DataService:DataService) => {
-		                return DataService.getFollowings<IAllFollowings>();
-                    }
-                }
+                controller:IndexCtrl
             })
 //#state
     });
