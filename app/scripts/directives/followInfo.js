@@ -8,8 +8,6 @@ var followInfo = function () {
             f: '=',
             ctrl: '=',
             arrIndex: '@'
-        },
-        link: function (scope, element, attrs) {
         }
     };
 };
