@@ -10,7 +10,7 @@ class IndexCtrl {
 
 	constructor(public $scope:IMainScope, public DataService:DataService) {
 		$scope.isViewLoading = true;
-		DataService.getFollowings().then((allFollowings)=> {
+        DataService.getFollowings<IAllFollowings>().then((allFollowings)=> {
 
 			this.Followings = allFollowings.Followings;
 
