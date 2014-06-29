@@ -2,14 +2,15 @@
 	<div>
 		<img class="puppyPic img-responsive"
 		     ng-src="{{('imgdir/'+f.UserName+'/myimg/mainpic.jpg') | spacesToDashes}}">
-		<h5 class="text-center">{{f.NickName}}</h5>
-		<h5 class="text-center">{{f.Location}}</h5>
+		<h6 class="text-center h6NickName">{{f.NickName}}</h6>
+		<h6 class="text-center h6location">{{f.Location}}</h6>
 	</div>
 
 	<div class="text-center btnWrapper" ng-show=isFollowing>
 		<!--<button class="btn btn-custom-icon"><i class="fa fa-envelope-o fa-fw "></i></button>-->
 		<button class="btn btn-sm btn-default"
-		        ng-click="ctrl.unfollow(f.Id,arrIndex)">Unfollow </button>
+		        ng-click="ctrl.unfollow(f.Id,arrIndex)">Unfollow
+		</button>
 	</div>
 
 	<div class="text-center btnWrapper" ng-show=!isFollowing>

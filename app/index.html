@@ -131,28 +131,22 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-sm-10">
+			<div class="col-sm-6">
 				<p>
 
 				<div ng-controller="IndexCtrl as index">
 
 				<div ui-view ng-show="!isViewLoading">
-					</div>
+				</div>
 					<spin-div ng-show="isViewLoading"></spin-div>
-
-
 					<div ng-show="index.error" class="panel panel-danger">Error in Database request. Check
 						Internet Connection
 					</div>
 				</div>
 				</p>
 
-
 			</div>
-
 		</div>
-
-
 	</div>
 </div>
 
